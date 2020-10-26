@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    .opo{
+      text-align: center;
+      font-weight: bold;
+      border: 5px solid black;
+      color: white;
+      border-radius: 26px;
+      background-color: black;
+    }
+    .ty{
+      background-color: blue;
+      border: 4px solid blue;
+      border-radius: 23px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+    }
+    .io{
+      background-color: pink;
+      border: 3px solid pink;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .hy{
+      color: white;
+    }
+
+ 
+    
+
+
+  </style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Artificial Intelligence Using Python - Post View</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="assets/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='assets/css/clean-blog.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header id="header">
+    <div class="inner">
+      <a href="/" class="logo"><strong>MacStock Official</strong></a>
+      <nav id="nav">
+        <a href="/" class="navbg">Home</a>
+        <a href="/posts" class="navbg">All Posts</a>
+        <a href="https://www.youtube.com/channel/UCIXud9Ot8pfDQizzdmQ-FyQ" class="navbg" target="_blank">Subscribe For Free</a>
+        <a href="https://macstockofficial.blogspot.com/2020/08/macstock-tech-gaming.html" class="navbg" target="_blank">Games</a>
+        <a href="#contact" class="navbg">Contact Me</a>
+        <a href="/search" class="navbg"><i class="icon fa-search"></i></a>
+      </nav>
+      <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{ url_for('static', filename='assets/images/rider.jpg') }})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1 class="hy">Artificial Intelligence Using Python</h1>
+            <h2 class="subheading hy">Python Program Which Will Make Your Technical Life easy</h2>
+            <span class="meta">Developed and Designed By
+              <a href="#">Kunal Gupta</a>
+              on August 29, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>Python is an Awesome Language Which can be Used to do Many Types of Work like Creating a Simple Calculator to Creating an Advance Artificial Intelligence</p>
+
+          <p>In this Post, I builded an Amazing Python Artificial Intelligence Program Which Can be Used for Playing Music, Playing Movies, Starting Programs and Games, Openign Website URL and Many Other Works.</p>
+
+        
+          <h2 class="section-heading">Python Libararies To Install Before Copying Codes</h2>
+
+          <p>Simply Open Your Terminal [You can Use 'Command Prompt' Or 'Windows Powershell' also. And Run These Commands there to Install These Packages.</p>
+
+          <p class = "opo">pip install wheel</p>
+          <p class = "opo">pip install speechrecognition</p>
+          <p class = "opo">pip install wikipedia</p>
+          <p class = "opo">pip install webbrowser</p>
+          <p class = "opo">pip install pyaudio</p>
+          <p class = "opo">pip install os</p>
+          <p class = "opo">pip install pyttsx3</p>
+
+          
+
+          <h2 class="section-heading">Source Code Here :</h2>
+
+          <pre><code>
+            import pyttsx3 
+            import datetime 
+            import speech_recognition as sr 
+            import wikipedia 
+            import webbrowser 
+            import os 
+            import random 
+            
+            
+            engine = pyttsx3.init('sapi5')
+            voices = engine.getProperty('voices')
+            engine.setProperty('voice', voices[1].id)
+            
+            
+            def speak(audio):
+                engine.say(audio)
+                engine.runAndWait()
+            
+            def wishme():
+                hour = int(datetime.datetime.now().hour)
+                if hour>=0 and hour<12:
+                    speak("Good Morning Sir!")
+                elif hour>=12 and hour<18:
+                    speak("Good Afternoon Sir!")
+                else:
+                    speak("Good Evening Sir")
+                speak("Sir, Syphen Is Online, Please Tell Me What you Want to do")
+            
+            def takeCommand():
+                r = sr.Recognizer()
+                with sr.Microphone() as source:
+                    print("Listening Your Command Sir ....")
+                    speak("Listening Your Command Sir ....")
+                    r.pause_threshold = 1
+                    r.energy_threshold = 1
+                    r.adjust_for_ambient_noise(source, duration=2)
+                    audio = r.listen(source)
+            
+                try:
+                    speak("Recognizing Your Command Sir ....")
+                    print("Recognizing Your Command Sir ....")
+                    query = r.recognize_google(audio, language='en-in')
+                    print("You had Said Sir : ", query)
+                    
+                except Exception as e:
+                    speak("Say that Again Please Sir ...")
+                    print("Say that Again Please Sir ...")
+                    return "None"
+                return query
+                
+                
+            if __name__ == '__main__':
+              wishme()
+              while True:
+                query = takeCommand().lower()
+                
+                if 'wikipedia' in query:
+                   speak("Searching For Wikipedia Sir .....")
+                   query = query.replace("wikipedia", "")
+                   results = wikipedia.summary(query, sentences=20)
+                   speak("According to Wikipedia")
+                   print(results)
+                   speak(results)
+            
+                elif 'google' in query:
+                      print("Opening Google For You Sir ....")
+                      speak("Opening Google For You Sir ....")
+                      webbrowser.open("https://google.com/")
+                      
+                elif 'open youtube' in query:
+                      print("Opening Youtube For You Sir ....")
+                      speak("Opening Youtube For You Sir ....")
+                      webbrowser.open("https://youtube.com/")
+                      
+                elif 'the time' in query:
+                      strTime = datetime.datetime.now().strftime("%H, %M, %S")
+                      speak(strTime)
+                      print(strTime)
+                      
+                elif '#Your App Name You Want to Say to open' in query:
+                      print("Opening #Your App Name Code For You Sir ....")
+                      speak("Opening #Your App Name For You Sir ....")
+                      path = "Your App Full Path With Double BackSlashes'\\'"
+                      os.startfile(path)
+                      
+                elif '#Your App Name You Want to Say to open' in query:
+                      print("Opening #Your App Name Code For You Sir ....")
+                      speak("Opening #Your App Name Code For You Sir ....")
+                      pop = "Your App Full Path With Double BackSlashes'\\'"
+                      os.startfile(pop)</code></pre>
+                      <p class="ty">List of Things That the In-built Coding Can do [Remember : You can add As Much As You Want Commands In the AI just by Copying the Written Code and Pasting It Below and Write Another Command In It] :</p>  
+                      <p class="io">1. Say 'Open Google' To Open Google.com in Chrome Browser.</p>
+                      <p class="io">2. Say 'Open Youtube to Open Youtube.com in Chrome Browser.</p>
+                      <p class="io">3. Say 'Tell me What is the Date' To know the Current Date in 24-Hour Format</p>
+                      <p class="io">4. After Writing Your Command You Want to Open a Particular App and Setting up The Path Of The App. Say 'Open [Your Given Command]' to Open [the Particular App'</p>
+
+                      <p>You Must Edit These Codes To Make It Amazing and Exciting to Use.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="inner">
+
+      <h3 id="contact">Contact Me</h3>
+
+      <form action="/contact" method="post">
+
+        <div class="field half first">
+          <label for="name">Name</label>
+          <input name="name" id="name" type="text" placeholder="Enter Your Name">
+        </div>
+        <div class="field half">
+          <label for="email">Email</label>
+          <input name="email" id="email" type="email" placeholder="Enter Your Email">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="6" placeholder="Enter Your Problem, Question or Message You Want To Send"></textarea>
+        </div>
+        <ul class="actions">
+          <li><input value="Send Message" class="button alt" type="submit"></li>
+        </ul>
+      </form>
+
+    
+
+      <div class="copyright">
+        &copy; MacStockOfficial.com | All Rights Reserved 2020-2027
+      </div>
+      <h4 class="reddish">Follow Us On</h4>
+      <div>
+        <a href="https://twitter.com/KunalGu77984717"target = "_blank" class="pol"><i class="icon fa-twitter fa-3x"></i></a>
+        <a href="https://www.youtube.com/channel/UCIXud9Ot8pfDQizzdmQ-FyQ" target = "_blank" class="yt"><i class="icon fa-youtube fa-3x"></i></a>
+        <a href="https://github.com/Kunal767"target = "_blank" class="gt"><i class="icon fa-github fa-3x"></i></a>
+      </div> 
+    </div>
+  </footer>
+
+<!-- Scripts -->
+  <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/skel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+</body>
+
+</html>

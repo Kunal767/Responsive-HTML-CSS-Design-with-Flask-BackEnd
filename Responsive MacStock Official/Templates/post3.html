@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+  
+ 
+
+
+    </style>
+
+ 
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Repeating Sum Calculator
+    Using Python - Post View</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="assets/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='assets/css/clean-blog.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header id="header">
+    <div class="inner">
+      <a href="/" class="logo"><strong>MacStock Official</strong></a>
+      <nav id="nav">
+        <a href="/" class="navbg">Home</a>
+        <a href="/posts" class="navbg">All Posts</a>
+        <a href="https://www.youtube.com/channel/UCIXud9Ot8pfDQizzdmQ-FyQ" class="navbg" target="_blank">Subscribe For Free</a>
+        <a href="https://macstockofficial.blogspot.com/2020/08/macstock-tech-gaming.html" target="_blank" class="navbg">Games</a>
+        <a href="#contact" class="navbg">Contact Me</a>
+        <a href="/search" class="navbg"><i class="icon fa-search"></i></a>
+      </nav>
+      <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{ url_for('static', filename='assets/images/calculator.jpg') }})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1 class="hy">Repeating Sum Calculator
+                Using Python</h1>
+            <h2 class="subheading hy">Python Program Which Works Same as an Instant Adding Calculator</h2>
+            <span class="meta">Developed and Designed By
+              <a href="#">Kunal Gupta</a>
+              on August 29, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <p>In This Python Program, You can easily Add Numbers Just By Entering Number and Pressing Enter, You Can Do It As Much as You Want, Coz this is in a While Loop.</p>
+            <p>You Do not Have To Install any Python Library to Run this Program, Very Simple and Short Codes are Given, Just Copy them and Paste In Your IDE or Python Official IDLE.</p>
+            <h2 class="section-heading">Source Code Here : </h2>
+            <!-- <button class="copyButton" id="copyButton">Copy to Clipboard</button>
+            <span class="alert">Copied to Clipboard!</span> -->
+            <pre><code>
+sum = 0
+while (True):
+    userInput = int(input("Enter the Price : \n"))
+    if (userInput!='q'):
+        sum = sum + int(userInput)
+        print("Your Order Total So far : ", sum)
+        
+
+    else:
+        print("Thanks For Using Our Calculator")
+        print("The Total Sum : ", sum )
+        break
+            </code></pre>
+            
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="inner">
+
+      <h3 id="contact">Contact Me</h3>
+
+      <form action="/contact" method="post">
+
+        <div class="field half first">
+          <label for="name">Name</label>
+          <input name="name" id="name" type="text" placeholder="Enter Your Name">
+        </div>
+        <div class="field half">
+          <label for="email">Email</label>
+          <input name="email" id="email" type="email" placeholder="Enter Your Email">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="6" placeholder="Enter Your Problem, Question or Message You Want To Send"></textarea>
+        </div>
+        <ul class="actions">
+          <li><input value="Send Message" class="button alt" type="submit"></li>
+        </ul>
+      </form>
+
+    
+
+      <div class="copyright">
+        &copy; MacStockOfficial.com | All Rights Reserved 2020-2027
+      </div>
+      <h4 class="reddish">Follow Us On</h4>
+      <div>
+        <a href="https://twitter.com/KunalGu77984717"target = "_blank" class="pol"><i class="icon fa-twitter fa-3x"></i></a>
+        <a href="https://www.youtube.com/channel/UCIXud9Ot8pfDQizzdmQ-FyQ" target = "_blank" class="yt"><i class="icon fa-youtube fa-3x"></i></a>
+        <a href="https://github.com/Kunal767"target = "_blank" class="gt"><i class="icon fa-github fa-3x"></i></a>
+      </div> 
+    </div>
+  </footer>
+
+<!-- Scripts -->
+  <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/skel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

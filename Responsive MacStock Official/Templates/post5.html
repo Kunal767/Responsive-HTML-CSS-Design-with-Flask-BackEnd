@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+ 
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>[Fixed] Services Changing Error Access is Denied - Post View</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="assets/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='assets/css/clean-blog.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header id="header">
+    <div class="inner">
+      <a href="/" class="logo"><strong>MacStock Official</strong></a>
+      <nav id="nav">
+        <a href="/" class="navbg">Home</a>
+        <a href="/posts" class="navbg">All Posts</a>
+        <a href="https://www.youtube.com/channel/UCIXud9Ot8pfDQizzdmQ-FyQ" class="navbg" target="_blank">Subscribe For Free</a>
+        <a href="https://macstockofficial.blogspot.com/2020/08/macstock-tech-gaming.html" class="navbg" target="_blank">Games</a>
+        <a href="#contact" class="navbg">Contact Me</a>
+        <a href="/search" class="navbg"><i class="icon fa-search"></i></a>
+      </nav>
+      <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{ url_for('static', filename='assets/images/don.jpg') }})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1 class="hy">[Fixed] Services Changing Error
+                Access is Denied</h1>
+            <h2 class="subheading hy">Access is Denied Error Showing after trying to change Services Type.</h2>
+            <span class="meta">Developed and Designed By
+              <a href="#">Kunal Gupta</a>
+              on August 29, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <p>In this Post, I have Managed to Show you, How you can Easily Change Services Type without Getting The "Access is Denied" Error</p>
+            <h4>For Better Understanding You Should Watch the Full Video [Explained In Hindi Language] By Clicking the Watch Video Button Given Below</h4>
+            <br>
+            <div class="lol">
+              <a href="https://www.youtube.com/watch?v=a932ibv5Flg" target="_blank">
+                  <button class="btd">Watch Video</button>
+              </a>
+          </div><br>
+          <h4>Steps to Fix This Error : </h4>
+          <p><strong>Step 1 : </strong>Check the Service, which you want to change, By Right Click On it and <strong>Clicking on Properties Option</strong></p>
+          <img src="{{ url_for('static', filename='assets/images/service1.png') }}" alt="tut1" class="legion"><br>
+          <p><strong>Step 2 : </strong>You Will See The Name Of the Service Written in Service Name Bar, Just Remember it in your Mind.</p>
+          <img src="{{ url_for('static', filename='assets/images/service2.png') }}" alt="tut1" class="legion"><br>
+          <p><strong>Step 3 : </strong><strong>Open Registry Editor</strong>, by Pressing <strong>WINDOWS Button + R </strong> and Type <strong>"regedit" </strong> and Click OK.</p>
+          <img src="{{ url_for('static', filename='assets/images/service3.png') }}" alt="tut1" class="legion"><br>
+          <p><strong>Step 4 : </strong>Go to the Given Directory :</p>
+          <p><strong>"HKEY_LOCAL_MACHINE > SYSTEM > CurrentControlSet > Services"</strong></p>
+          <img src="{{ url_for('static', filename='assets/images/service4.png') }}" alt="tut1" class="legion"><br>
+          <p><strong>Step 5 : </strong>Here You Need to Find, the Name of the Service You have Seen in the Service Name Bar.</p>
+          <img src="{{ url_for('static', filename='assets/images/service5.png') }}" alt="tut1" class="legion"><br>
+          <p><strong>Step 6 : </strong>Double Click on the Start Button Given in the Service List, and change the Value to Which Option you want to Select, If you want that the Service should be tuned to <strong>Automatic (Delayed Start), then type 1 in the Value Section.</strong>, If you want that that the Service should be tuned to <strong>Automatic, then type 2 in the Value Section.</strong>, If you want that that the Service should be tuned to <strong>Manual, then type 3 in the Value Section.</strong>, If you want that that the Service should be tuned to <strong>Disabled, then type 4 in the Value Section.</strong></p>
+          <img src="{{ url_for('static', filename='assets/images/service6.png') }}" alt="tut1" class="legion"><br>
+          <p><strong>After Entering a Valid Number 1 to 4 in the Value Data Section, Refresh Your Computer, and Open Services Again and You Will see that the Service Type will change to the respective number value you are typed in the Value Data Section. Example : If You Typed 4 in the Value Data Section, then the Service type will be changed to Disabled.</strong></p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="inner">
+
+      <h3 id="contact">Contact Me</h3>
+
+      <form action="/contact" method="post">
+
+        <div class="field half first">
+          <label for="name">Name</label>
+          <input name="name" id="name" type="text" placeholder="Enter Your Name">
+        </div>
+        <div class="field half">
+          <label for="email">Email</label>
+          <input name="email" id="email" type="email" placeholder="Enter Your Email">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="6" placeholder="Enter Your Problem, Question or Message You Want To Send"></textarea>
+        </div>
+        <ul class="actions">
+          <li><input value="Send Message" class="button alt" type="submit"></li>
+        </ul>
+      </form>
+
+    
+
+      <div class="copyright">
+        &copy; MacStockOfficial.com | All Rights Reserved 2020-2027
+      </div>
+      <h4 class="reddish">Follow Us On</h4>
+      <div>
+        <a href="https://twitter.com/KunalGu77984717"target = "_blank" class="pol"><i class="icon fa-twitter fa-3x"></i></a>
+        <a href="https://www.youtube.com/channel/UCIXud9Ot8pfDQizzdmQ-FyQ" target = "_blank" class="yt"><i class="icon fa-youtube fa-3x"></i></a>
+        <a href="https://github.com/Kunal767"target = "_blank" class="gt"><i class="icon fa-github fa-3x"></i></a>
+      </div> 
+    </div>
+  </footer>
+
+<!-- Scripts -->
+  <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/skel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+</body>
+
+</html>

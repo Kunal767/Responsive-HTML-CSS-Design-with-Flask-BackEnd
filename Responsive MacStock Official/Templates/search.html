@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Posts Here</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+    <style>
+        
+*{
+    margin: 0%;
+    padding: 0%;
+}        
+body{
+    background-color: lightyellow;
+}
+.title{
+    padding-top: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: cursive;
+    font-size: xx-large;
+    font-weight: bold;
+    color: pink;
+}
+ul {
+    list-style-type: none;
+    
+}
+.peter{
+    text-decoration-line: none;
+    font-size: x-large;
+    color: white;
+    font-family: 'ubuntu', sans-serif;
+}
+.peter:hover{
+    color: black;
+}
+p {
+    border: 2px solid grey;
+    background-color: grey;
+    border-radius: 6px;
+    padding: 7px;
+    text-align: center;
+    cursor: pointer;
+}
+p:hover{
+    background-color: lightpink;
+}
+#rider{
+    padding: 4px;
+    margin-top: 34px;
+    width: 100%;
+    height: 100%;
+}
+#search{
+    width: 100%;
+    
+}
+.lil{
+    align-items: center;
+}
+
+    </style>
+</head>
+<body>
+   
+       
+    
+    <h2 class="title">Search Posts</h2>
+<div class="lil">
+    <input type="text" id="search" placeholder="   Search Posts Here" onkeyup="search()">
+</div>
+
+    <ul id="rider">
+        <p><a href="/post1" class="peter">Artificial Intelligence Using Python</a></p>
+   
+        <p><a href="/post3" class="peter">[FIXED] Scripts Folder is Empty in Python</a></p>
+        
+        <p><a href="/post2" class="peter">Simple Calculator Using Java</a></p>
+        
+        <p><a href="/post4" class="peter">Repeating Calculator Using Python</a></p>
+        <p><a href="/post5" class="peter">Run Android Apps and Games On PC Without EMULATOR</a></p>
+               
+        <p><a href="/post6" class="peter">[Fixed] Services Changing Error Access is Denied</a></p>
+
+        <p><a href="#" class="peter">Lol</a></p>
+        <p><a href="#" class="peter">Lol</a></p>
+        <p><a href="#" class="peter">Lol</a></p>
+        <p><a href="#" class="peter">Lol</a></p>
+    </ul>
+    <footer id="footer">
+        <div class="inner">
+
+            <h3 id="contact">Contact Me</h3>
+
+            <form action="/contact" method="post">
+
+                <div class="field half first">
+                    <label for="name">Name</label>
+                    <input name="name" id="name" type="text" placeholder="Enter Your Name">
+                </div>
+                <div class="field half">
+                    <label for="email">Email</label>
+                    <input name="email" id="email" type="email" placeholder="Enter Your Email">
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="6" placeholder="Enter Your Problem, Question or Message You Want To Send"></textarea>
+                </div>
+                <ul class="actions">
+                    <li><input value="Send Message" class="button alt" type="submit"></li>
+                </ul>
+            </form>
+            <div class="copyright">
+                &copy; MacStockOfficial.com | All Rights Reserved 2020-2027
+            </div>
+            <h4 class="reddish">Follow Us On</h4>
+            <div>
+                <a href="https://twitter.com/KunalGu77984717"target = "_blank" class="pol"><i class="icon fa-twitter fa-3x"></i></a>
+                <a href="https://www.youtube.com/channel/UCIXud9Ot8pfDQizzdmQ-FyQ" target = "_blank" class="yt"><i class="icon fa-youtube fa-3x"></i></a>
+                <a href="https://github.com/Kunal767"target = "_blank" class="gt"><i class="icon fa-github fa-3x"></i></a>
+            </div> 
+        </div>
+    </footer>
+    <script>
+
+ const search = () =>{
+     let filter = document.getElementById('search').value.toUpperCase();
+
+     let ul = document.getElementById('rider');
+
+     let p = ul.getElementsByTagName('p');
+
+     for(var i=0; i<p.length; i++){
+         let a = p[i].getElementsByTagName('a')[0];
+
+         let textValue = a.textContent || a.innerHTML ;
+
+         if(textValue.toUpperCase().indexOf(filter) > -1){
+             p[i].style.display = '';
+         }else{
+            p[i].style.display = 'none';
+         }
+     }
+ }       
+    </script>
+</body>
+</html>

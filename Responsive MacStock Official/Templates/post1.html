@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+        .op{
+            text-align: center;
+            border: 3px solid black;
+            border-radius: 34px;
+            background-color: black;
+            color: white;
+            font-family: fantasy;
+        }
+        .pop{
+            color: black;
+            background-color: grey;
+            border: 4px solid grey;
+            border-radius: 34px;
+        }
+     
+
+
+    </style>
+
+ 
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Simple Calculator Using Java - Post View</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="assets/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='assets/css/clean-blog.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header id="header">
+    <div class="inner">
+      <a href="/" class="logo"><strong>MacStock Official</strong></a>
+      <nav id="nav">
+        <a href="/" class="navbg">Home</a>
+        <a href="/posts" class="navbg">All Posts</a>
+        <a href="https://www.youtube.com/channel/UCIXud9Ot8pfDQizzdmQ-FyQ" class="navbg" target="_blank">Subscribe For Free</a>
+        <a href="https://macstockofficial.blogspot.com/2020/08/macstock-tech-gaming.html" target="_blank" class="navbg">Games</a>
+        <a href="#contact" class="navbg">Contact Me</a>
+        <a href="/search" class="navbg"><i class="icon fa-search"></i></a>
+      </nav>
+      <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{ url_for('static', filename='assets/images/freeware.jpg') }})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1 class="hy">Simple Calculator Using Java</h1>
+            <h2 class="subheading hy">Java Program Which Will Help You In Calculating Numbers</h2>
+            <span class="meta">Developed and Designed By
+              <a href="#">Kunal Gupta</a>
+              on August 29, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <p>In this Java Program You Can Divide, Multiply, Substract Or Add any type of Numbers.</p>
+            <p >If You are a Advanced Java Programmer, Then It is Not For You. This Program Is Only For Beginners Or InterMediate Java Programmers Because It is Not GUI(Graphical User Interface) Program.</p>
+            <h2 class="section-heading">Things to Do Before Copying Codes</h2>
+            <p class="pop">1. Make Sure You have Installed Java and Its JDK</p>
+            <p class="pop">2. Create A New Folder WhereEver You Want</p>
+            <p class="pop">3. Create a New File in The Folder Name "Anything.bat"</p>
+            <p class="pop">4. Right Click On the File and Click Edit And Paste the Given Text There. </p>
+            <p class="op">java -jar JavaCalculator.jar</p>
+            <h2 class="section-heading">Source Code Here : </h2>
+            <pre><code>
+import java.util.Scanner;
+              
+public class Main {
+              
+                  public static void main(String[] args) throws InterruptedException {
+                      for (int i = 0; i < 2000; i++) {
+                          Scanner scanner = new Scanner(System.in);
+                          double a, b;
+                          System.out.print("Enter The First Number : ");
+                          a = scanner.nextDouble();
+                          System.out.print("Enter the Second Number : ");
+                          b = scanner.nextDouble();
+                          System.out.println();
+                          System.out.println();
+                          System.out.println();
+                          System.out.print("You have Entered : ");
+                          System.out.print(a);
+                          System.out.print(" and ");
+                          System.out.print(b);
+                          System.out.println();
+                          System.out.println();
+                          System.out.println();
+                          System.out.println("Press 1 for Addition");
+                          System.out.println();
+                          System.out.println("Press 2 For Substraction");
+                          System.out.println();
+                          System.out.println("Press 3 for Multiplication");
+                          System.out.println();
+                          System.out.println("Press 4 For Division");
+                          
+                          
+                          int selection = scanner.nextInt();
+                          switch (selection) {
+                              case 1:
+                                  System.out.println("Adding These Numbers ..... Please Wait");
+                                  Thread.sleep(3000);
+                                  System.out.println();
+                                  System.out.println();
+                                  System.out.print("The Sum of These Numbers is : ");
+                                  System.out.println(a + b);
+                                  break;
+                              case 2:
+                                  System.out.println("Substracting These Numbers ..... Please Wait");
+                                  Thread.sleep(3000);
+                                  System.out.println();
+                                  System.out.println();
+                                  System.out.print("The Substraction Of these Two Numbers is : ");
+                                  System.out.println(a - b);
+                                  break;
+                              case 3:
+                                  System.out.println("Multiplying These Numbers ..... Please Wait");
+                                  Thread.sleep(3000);
+                                  System.out.println();
+                                  System.out.println();
+                                  System.out.print("The Multiplication Of these Two Numbers is : ");
+                                  System.out.println(a * b);
+                                  break;
+                              case 4:
+                                  System.out.println("Dividing These Numbers ..... Please Wait");
+                                  Thread.sleep(3000);
+                                  System.out.println();
+                                  System.out.println();
+                                  System.out.print("The Division of These two Numbers Is : ");
+                                  System.out.println(a / b);
+                                  break;
+                              default:
+                                  System.out.println();
+                                  System.out.println("Invalid Content, Press one of the Given Numbers to perform a Operation");
+                                  break;
+                                  
+                                  
+                          }
+                          System.out.println();
+                          System.out.println();
+                          System.out.println();
+                          System.out.println("Thank You For Using Kunal Calculator, GOODBYE");
+                          System.out.println();
+                          System.out.println("Want to Use Again, then Wait 3 Seconds");
+                          Thread.sleep(1800);
+                          System.out.println();
+                          System.out.println();
+                          System.out.println();
+                          
+                          
+                      }
+                  }
+              }</code></pre>
+              <h2 class="section-heading">Make Sure To Build This in .jar Format and Save the File Name As "JavaCalculator.jar"</h2>
+              <p>You can Use This As Much As You Want Coz This is In A Loop</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="inner">
+
+      <h3 id="contact">Contact Me</h3>
+
+      <form action="/contact" method="post">
+
+        <div class="field half first">
+          <label for="name">Name</label>
+          <input name="name" id="name" type="text" placeholder="Enter Your Name">
+        </div>
+        <div class="field half">
+          <label for="email">Email</label>
+          <input name="email" id="email" type="email" placeholder="Enter Your Email">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="6" placeholder="Enter Your Problem, Question or Message You Want To Send"></textarea>
+        </div>
+        <ul class="actions">
+          <li><input value="Send Message" class="button alt" type="submit"></li>
+        </ul>
+      </form>
+
+    
+
+      <div class="copyright">
+        &copy; MacStockOfficial.com | All Rights Reserved 2020-2027
+      </div>
+      <h4 class="reddish">Follow Us On</h4>
+      <div>
+        <a href="https://twitter.com/KunalGu77984717"target = "_blank" class="pol"><i class="icon fa-twitter fa-3x"></i></a>
+        <a href="https://www.youtube.com/channel/UCIXud9Ot8pfDQizzdmQ-FyQ" target = "_blank" class="yt"><i class="icon fa-youtube fa-3x"></i></a>
+        <a href="https://github.com/Kunal767"target = "_blank" class="gt"><i class="icon fa-github fa-3x"></i></a>
+      </div> 
+    </div>
+  </footer>
+
+<!-- Scripts -->
+  <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/skel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+</body>
+
+</html>
